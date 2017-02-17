@@ -9,13 +9,13 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 app.use(bodyParser.json())
-app.use(express.static(path.join(__dirname, '../build')))
+app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 app.use('/api/posts', require('./routes/posts'))
 app.use('/api/posts', require('./routes/comments'))
 
-app.use('*', function(req, res, next) {
-  res.sendFile('index.html', {root: path.join(__dirname, '../build')})
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 })
 
 app.use(function(req, res, next) {
