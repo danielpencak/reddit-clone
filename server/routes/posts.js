@@ -3,6 +3,7 @@ const router = express.Router()
 const knex = require('../../db')
 
 router.get('/', (req, res, next) => {
+  console.log(process.env)
   knex('posts')
     .orderBy('created_at', 'DESC')
       .then(posts => {
