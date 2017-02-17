@@ -30,7 +30,6 @@ class PostEdit extends Component {
       )
   }
 
-  // console.log('id', props.params.id);
   render() {
     return (
       <PostForm buttonText="Update Post" body={this.state.post.body} author={this.state.post.author} title={this.state.post.title} image_url={this.state.post.image_url} postFunction={this.updatePost} />

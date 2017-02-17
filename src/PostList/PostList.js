@@ -26,7 +26,6 @@ class PostList extends Component {
   }
 
   handleToggleComments(id) {
-    // console.log(this.state.toggleComments);
     const newStateofPosts = this.state.posts.map(post => {
       if (post.id === id) {
         post.toggleComments = !post.toggleComments;
@@ -51,7 +50,6 @@ class PostList extends Component {
   addPost(post) {
     axios.post(`/api/posts/`, post)
       .then(({ data }) => {
-        console.log(data);
         const newStateAddPostFormVisible = false;
         this.setState({ addPostFormVisible: newStateAddPostFormVisible })
         this.getPosts()

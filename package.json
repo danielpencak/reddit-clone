@@ -24,6 +24,7 @@
     "timeago-react": "^1.0.8"
   },
   "scripts": {
+    "start-prod": "env PORT=3000 nodemon server/bin/www",
     "knex": "knex",
     "start": "react-scripts start & nodemon server/bin/www",
     "build": "react-scripts build",

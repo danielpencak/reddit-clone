@@ -6,7 +6,6 @@ import CommentList from '../CommentList/CommentList';
 import {Link} from 'react-router';
 
 function Post({ title, author, created_at, vote_count, body, id, image_url, comments, addVotes, removeVotes, toggleComments, handleToggleComments, addComment }){
-  // console.log('??', toggleComments);
     return (
       <div>
         {

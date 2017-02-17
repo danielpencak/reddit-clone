@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 class CommentList extends Component {
-  // console.log('--', toggleComments);
   constructor(props) {
     super(props);
 
@@ -13,12 +12,10 @@ class CommentList extends Component {
   }
 
   handleCommentInput(event) {
-    console.log(this.state.comment);
     this.setState({ comment: event.target.value})
   }
 
   render() {
-    console.log(this.props.comments, this.props.id, this.state.comment);
     return (
       <div className="row">
         <div className="col-md-offset-1">
