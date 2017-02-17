@@ -21,7 +21,10 @@ router.get('/', (req, res, next) => {
             res.json(posts)
           })
       })
-      .catch(err => next(err))
+      .catch(err => {
+        console.log('get post')
+        next(err)
+      })
 })
 
 router.post('/', validate, (req, res, next) => {
